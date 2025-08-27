@@ -63,7 +63,7 @@ function App() {
       return;
     }
 
-    const took = Date.now() - t1
+    const took = resp.took;
 
     const marketAssetName = cvToJSON(hexToCV(resp.calls[0].result)).value.value;
     const marketAssetSymbol = cvToJSON(hexToCV(resp.calls[1].result)).value.value;
