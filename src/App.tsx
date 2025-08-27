@@ -45,8 +45,6 @@ function App() {
     setTook(0);
     setLoading(true);
 
-    const t1 = Date.now();
-
     let resp;
 
     try {
