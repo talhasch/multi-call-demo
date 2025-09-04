@@ -87,7 +87,7 @@ function App() {
     const freeLiquidity = cvToJSON(hexToCV(resp.calls[13].result)).value;
     const reserveBalance = cvToJSON(hexToCV(resp.calls[14].result)).value;
     const collateralBalance = cvToJSON(hexToCV(resp.calls[15].result)).value.value;
-    const collateralsDepositedBalance = cvToJSON(hexToCV(resp.calls[16].result)).value.value.amount.value;
+    const collateralsDepositedBalance = cvToJSON(hexToCV(resp.calls[16].result)).value?.value.amount.value || 0;
     const userPosition = cvToJSON(hexToCV(resp.calls[17].result)).value.value;
     const userDebtShares = userPosition["debt-shares"].value;
     const userLpShares = userPosition["borrowed-amount"].value;
